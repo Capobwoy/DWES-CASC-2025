@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <h1>Formulario</h1>
+    <form action="#" th:action="@{/}" th:object="${usuario}" method="post">
+        <label>Peso: <input type="text" th:field="*{peso}" /></label><br/>
+        <label>Estatura: <input type="text" th:field="*{estatura}" /></label><br/>
+        <label>Edad: <input type="text" th:field="*{edad}" /></label><br/>
+        <label>Género (1 Hombre, 2 Mujer): <input type="text" th:field="*{genero}" /></label><br/>
+        <button type="submit">Calcular</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,51 @@
+package com.example.demo;
+
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
+
+public class Usuario {
+
+    @NotNull(message = "El peso es obligatorio")
+    @Min(value = 1, message = "El peso debe ser mayor que 0")
+    private Double peso;
+
+    @NotNull(message = "La estatura es obligatoria")
+    @Min(value = 1, message = "La estatura debe ser mayor que 0")
+    private Double estatura;
+
+    @NotNull(message = "La edad es obligatoria")
+    @Min(value = 1, message = "La edad debe ser mayor que 0")
+    private Integer edad;
+
+    @NotNull(message = "El género es obligatorio")
+    private Integer genero; // 1 = Hombre, 2 = Mujer
+
+    // Getters y setters igual que antes...
+	public Double getPeso() {
+		return peso;
+	}
+	public void setPeso(double peso) {
+		this.peso=peso;
+	}
+	
+	public double getEstatura() {
+		return estatura;
+	}
+	public void setEstatura(double estatura) {
+		this.estatura=estatura;
+	}
+	
+	public int getEdad() {
+		return edad; 
+	}
+    public void setEdad(int edad) {
+    	this.edad = edad;
+    	}
+
+    public int getGenero() {
+    	return genero;
+    }
+    public void setGenero(int genero) {
+    	this.genero = genero;
+    }
+}

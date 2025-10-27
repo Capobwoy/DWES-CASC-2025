@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Resultado de Grasa Corporal</title>
+</head>
+<body>
+    <h1>Resultado del Cálculo</h1>
+    <p>Tu porcentaje de grasa corporal es: <strong th:text="${porcentajeGrasa}">0</strong>%</p>
+    <p>Clasificación: <strong th:text="${clasificacion}">N/A</strong></p>
+    <a th:href="@{/}">Volver al formulario</a>
+</body>
+</html>
