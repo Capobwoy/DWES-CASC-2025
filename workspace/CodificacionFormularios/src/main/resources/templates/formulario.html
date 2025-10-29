@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Prueba Codificación</title>
+</head>
+<body>
+    <h2>Formulario de prueba de codificación</h2>
+    
+    <form action="/procesarGet" method="get">
+        <label>Texto (GET):</label><br>
+        <input type="text" name="texto">
+        <button type="submit">Enviar por GET</button>
+    </form>
+    
+    <br>
+
+    <form action="/procesarPost" method="post">
+        <label>Texto (POST):</label><br>
+        <input type="text" name="texto">
+        <button type="submit">Enviar por POST</button>
+    </form>
+</body>
+</html>

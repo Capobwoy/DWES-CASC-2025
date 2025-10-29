@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Resultado</title>
+</head>
+<body>
+    <h2>Resultado de envío [[${metodo}]]</h2>
+
+    <p><b>Texto recibido:</b> [[${textoRecibido}]]</p>
+    <p th:if="${metodo == 'GET'}"><b>Texto codificado:</b> [[${textoCodificado}]]</p>
+
+    <p><a th:href="@{'/procesarGet'(texto=${textoRecibido})}">Probar con enlace (query-string)</a></p>
+
+    <p><a href="/">Volver al formulario</a></p>
+</body>
+</html>
