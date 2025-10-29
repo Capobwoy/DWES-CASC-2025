@@ -18,7 +18,7 @@ public class PruebaController {
 	}
 	
 	@GetMapping("/procesarGet")
-	public String procesarGet(@RequestParam String texto, Model model) {
+	public String procesarGet(@RequestParam("texto") String texto, Model model) {
 		model.addAttribute("metodo", "GET");
 		model.addAttribute("textoRecibido", texto);
 		model.addAttribute("textoCodificado", URLEncoder.encode(texto, StandardCharsets.UTF_8));
@@ -26,7 +26,7 @@ public class PruebaController {
 	}
 	
 	@PostMapping("/procesarPost")
-	public String procesarPost(@RequestParam String texto, Model model) {
+	public String procesarPost(@RequestParam("texto") String texto, Model model) {
 		model.addAttribute("metodo", "POST");
 		model.addAttribute("textoRecibido", texto);
 		return "resultado";
