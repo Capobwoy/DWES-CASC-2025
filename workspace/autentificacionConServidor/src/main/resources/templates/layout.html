@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<title>D2-UD3</title>
+	</head>
+	<body>
+		<header>
+			<input type="hidden" name="usuario" th:value="${usuario}">
+			<h2>Bienvenido <span th:text="${usuario}"></span></h2>
+			<nav>
+				<ul>
+					<li><a href="/pagina1">Página 1</a></li>
+					<li><a href="/pagina2">Página 2</a></li>
+					<li><a href="/logout">Cerrar sesión</a></li>
+				</ul>
+			</nav>
+		</header>
+	</body>
+</html>
